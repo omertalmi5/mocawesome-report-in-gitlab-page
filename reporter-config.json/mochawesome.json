@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2020-08-03T14:14:40.558Z",
-    "end": "2020-08-03T14:14:41.589Z",
-    "duration": 1031,
+    "start": "2020-08-03T14:36:30.821Z",
+    "end": "2020-08-03T14:36:32.186Z",
+    "duration": 1365,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4681ed30-f80c-4daf-a8fc-1f0705d34adf",
+      "uuid": "2c543626-10de-4c39-93ad-6df0875ddff3",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\getPokemonName.spec.js",
       "file": "cypress\\integration\\examples\\getPokemonName.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8425a139-e498-47a8-8955-76f53635dec4",
+          "uuid": "f4362f70-887b-4bec-950e-0a2630379bf5",
           "title": "API Testing with Cypress",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Validate the header",
               "fullTitle": "API Testing with Cypress Validate the header",
               "timedOut": null,
-              "duration": 535,
+              "duration": 685,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.login(\"omer\", \"talmi\");\ncy.get(\"@pikachu\").its(\"headers\").its(\"content-type\").should(\"include\", \"application/json; charset=utf-8\");",
               "err": {},
-              "uuid": "73c201f9-d6b1-4a4f-92fc-ac52f4325f19",
-              "parentUUID": "8425a139-e498-47a8-8955-76f53635dec4",
+              "uuid": "0e5693a6-0c26-4e2a-a64e-2b294a48f5d9",
+              "parentUUID": "f4362f70-887b-4bec-950e-0a2630379bf5",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Validate the status code",
               "fullTitle": "API Testing with Cypress Validate the status code",
               "timedOut": null,
-              "duration": 250,
+              "duration": 296,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get('@pikachu').its('status').should('equal', 200);",
               "err": {},
-              "uuid": "921c351f-b04b-4423-9758-b27ecefe7f21",
-              "parentUUID": "8425a139-e498-47a8-8955-76f53635dec4",
+              "uuid": "c945fbf8-85e7-46f6-bb26-42d3aea65002",
+              "parentUUID": "f4362f70-887b-4bec-950e-0a2630379bf5",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Validate the pokemon's name",
               "fullTitle": "API Testing with Cypress Validate the pokemon's name",
               "timedOut": null,
-              "duration": 212,
+              "duration": 356,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get(\"@pikachu\").its(\"body\").should(\"include\", {\n  name: \"pikachu\"\n});",
               "err": {},
-              "uuid": "c2b1a020-0d35-4820-a715-91f9dd7c67f2",
-              "parentUUID": "8425a139-e498-47a8-8955-76f53635dec4",
+              "uuid": "44aed2d6-3f12-41b9-a60a-076403f5523f",
+              "parentUUID": "f4362f70-887b-4bec-950e-0a2630379bf5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "73c201f9-d6b1-4a4f-92fc-ac52f4325f19",
-            "921c351f-b04b-4423-9758-b27ecefe7f21",
-            "c2b1a020-0d35-4820-a715-91f9dd7c67f2"
+            "0e5693a6-0c26-4e2a-a64e-2b294a48f5d9",
+            "c945fbf8-85e7-46f6-bb26-42d3aea65002",
+            "44aed2d6-3f12-41b9-a60a-076403f5523f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 997,
+          "duration": 1337,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

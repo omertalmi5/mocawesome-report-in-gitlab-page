@@ -42,8 +42,8 @@ install:
     - npm run start:ci &
     - npx cypress run --reporter mochawesome  --reporter-options reportDir=reporter-config.json,overwrite=false,h
       tml=false,json=true
-    - npx mochawesome-merge "cypress/results/*.json" > mochawesome.json
-    - npx marge reporter-config.json/mochawesome.json
+    - npx mochawesome-merge "reporter-config.json/*.json" > mochawesome.json
+    - npx marge mochawesome.json
     - mkdir .public
     - cp mochawesome-report/* .public
     - mv .public public
