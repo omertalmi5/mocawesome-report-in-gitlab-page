@@ -48,6 +48,5 @@ test:
   artifacts:
     when: always
     paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
+      - public
     expire_in: 1 day
