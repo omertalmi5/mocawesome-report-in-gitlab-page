@@ -52,16 +52,3 @@ install:
       - cypress/videos/**/*.mp4
       - cypress/screenshots/**/*.png
     expire_in: 1 day
-
-# actual job definitions
-# all steps are the same, they come from the template above
-electrons-1:
-  extends: .job_template
-electrons-2:
-  extends: .job_template
-electrons-3:
-  extends: .job_template
-electrons-4:
-  extends: .job_template
-electrons-5:
-  extends: .job_template
