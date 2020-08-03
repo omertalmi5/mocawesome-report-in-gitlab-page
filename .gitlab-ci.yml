@@ -40,10 +40,10 @@ install:
   script:
     # start the server in the background
     - npm run start:ci &
-    # run Cypress test in load balancing mode
-    - npm run --reporter mochawesome
-    - mochawesome-merge --reportDir cypress/results > mochawesome.json
-    - merge mochawesome.json
+    - npx cypress run --reporter mochawesome  --reporter-options reportDir=reporter-config.json,overwrite=false,h
+      tml=false,json=true
+    - npx mochawesome-merge "cypress/results/*.json" > mochawesome.json
+    - npx marge reporter-config.json/mochawesome.json
     - mkdir .public
     - cp mochawesome-report/* .public
     - mv .public public

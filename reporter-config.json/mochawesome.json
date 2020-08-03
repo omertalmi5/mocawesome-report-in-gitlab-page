@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-03T14:14:40.558Z",
+    "end": "2020-08-03T14:14:41.589Z",
+    "duration": 1031,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4681ed30-f80c-4daf-a8fc-1f0705d34adf",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\getPokemonName.spec.js",
+      "file": "cypress\\integration\\examples\\getPokemonName.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8425a139-e498-47a8-8955-76f53635dec4",
+          "title": "API Testing with Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the header",
+              "fullTitle": "API Testing with Cypress Validate the header",
+              "timedOut": null,
+              "duration": 535,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(\"omer\", \"talmi\");\ncy.get(\"@pikachu\").its(\"headers\").its(\"content-type\").should(\"include\", \"application/json; charset=utf-8\");",
+              "err": {},
+              "uuid": "73c201f9-d6b1-4a4f-92fc-ac52f4325f19",
+              "parentUUID": "8425a139-e498-47a8-8955-76f53635dec4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the status code",
+              "fullTitle": "API Testing with Cypress Validate the status code",
+              "timedOut": null,
+              "duration": 250,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@pikachu').its('status').should('equal', 200);",
+              "err": {},
+              "uuid": "921c351f-b04b-4423-9758-b27ecefe7f21",
+              "parentUUID": "8425a139-e498-47a8-8955-76f53635dec4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the pokemon's name",
+              "fullTitle": "API Testing with Cypress Validate the pokemon's name",
+              "timedOut": null,
+              "duration": 212,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"@pikachu\").its(\"body\").should(\"include\", {\n  name: \"pikachu\"\n});",
+              "err": {},
+              "uuid": "c2b1a020-0d35-4820-a715-91f9dd7c67f2",
+              "parentUUID": "8425a139-e498-47a8-8955-76f53635dec4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "73c201f9-d6b1-4a4f-92fc-ac52f4325f19",
+            "921c351f-b04b-4423-9758-b27ecefe7f21",
+            "c2b1a020-0d35-4820-a715-91f9dd7c67f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 997,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reporter-config.json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
