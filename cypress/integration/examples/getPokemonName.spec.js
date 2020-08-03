@@ -1,9 +1,9 @@
-import { hello } from "../../utils/generalUtils";
+import { hello, getCyData } from "../../utils/generalUtils";
 
 describe("API Testing with Cypress", () => {
   beforeEach(() => {
-    hello("omer");
-    cy.login("omer", "talmi");
+    hello(getCyData("omer"));
+    cy.login(getCyData("omer"), "talmi");
     cy.request('GET', "/25").as("pikachu");
   });
 
