@@ -1,1 +1,4 @@
 mochawesome.json
+mochawesome-report/
+reporter-config.json/
+cypress/videos/

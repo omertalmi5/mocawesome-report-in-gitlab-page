@@ -43,10 +43,11 @@ test:
     - npx mochawesome-merge "reporter-config.json/*.json" > mochawesome.json
     - npx marge mochawesome.json
     - mkdir .public
-    - cp mochawesome-report/* .public
+    - cp -r mochawesome-report/* .public
     - mv .public public
   artifacts:
     when: always
     paths:
       - public
+      - mochawesome-report
     expire_in: 1 day
