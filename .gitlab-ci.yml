@@ -33,7 +33,7 @@ install:
     - npm run cy:info
 
 # all jobs that actually run tests can use the same definition
-test:
+pages:
   image: cypress/base:10
   stage: test
   script:
