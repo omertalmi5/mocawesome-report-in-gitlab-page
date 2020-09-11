@@ -37,8 +37,6 @@ pages:
   image: cypress/base:10
   stage: test
   script:
-    # start the server in the background
-#   - npm run start:ci &
     - npx cypress run --reporter mochawesome  --reporter-options reportDir=reporter-config.json,overwrite=false,html=false,json=true
     - npx mochawesome-merge "reporter-config.json/*.json" > mochawesome.json
     - npx marge mochawesome.json
