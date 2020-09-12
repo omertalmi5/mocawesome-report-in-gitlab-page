@@ -40,4 +40,4 @@ pages:
     - mv mochawesome-report public
   artifacts:
     paths:
-      - .public
+      - public
