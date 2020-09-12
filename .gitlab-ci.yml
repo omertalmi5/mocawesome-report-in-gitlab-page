@@ -37,9 +37,7 @@ pages:
     - npx cypress run --reporter mochawesome  --reporter-options reportDir=reporter-config.json,overwrite=false,html=false,json=true
     - npx mochawesome-merge "reporter-config.json/*.json" > mochawesome.json
     - npx marge mochawesome.json
-    - mkdir .public
-    - cp -r mochawesome-report/* .public
-    - mv .public public
+    - mv mochawesome-report public
   artifacts:
     when: always
     paths:
