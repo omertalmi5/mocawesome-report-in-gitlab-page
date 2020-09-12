@@ -1,4 +1,4 @@
-# first, install Cypress, then run all tests (in parallel)
+# first, install Cypress, then run all tests
 stages:
   - build
   - test
@@ -9,8 +9,6 @@ variables:
   npm_config_cache: "$CI_PROJECT_DIR/.npm"
   CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
 
-# cache using branch name
-# https://gitlab.com/help/ci/caching/index.md
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
@@ -32,7 +30,6 @@ install:
     - npm run cy:verify
     - npm run cy:info
 
-# all jobs that actually run tests can use the same definition
 pages:
   image: cypress/base:10
   stage: test
