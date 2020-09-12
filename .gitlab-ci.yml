@@ -38,9 +38,3 @@ pages:
     - npx mochawesome-merge "reporter-config.json/*.json" > mochawesome.json
     - npx marge mochawesome.json
     - mv mochawesome-report public
-  artifacts:
-    when: always
-    paths:
-      - public
-      - mochawesome-report
-    expire_in: 1 day
