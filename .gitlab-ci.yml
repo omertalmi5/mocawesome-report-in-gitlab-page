@@ -38,3 +38,6 @@ pages:
     - npx mochawesome-merge "reporter-config.json/*.json" > mochawesome.json
     - npx marge mochawesome.json
     - mv mochawesome-report public
+  artifacts:
+    paths:
+      - mochawesome-report
