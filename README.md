@@ -1,3 +1,5 @@
+**An example for integrating integrate Mochawesome reports with GitLab Pages**
+
 Running this .gitlab-ci.yml will run all cypress test, 
 generate mochawesome report and deploy it as gitlab page in permanent url.
 
