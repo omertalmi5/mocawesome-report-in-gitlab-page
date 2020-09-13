@@ -35,9 +35,9 @@ pages:
   stage: test
   script:
     # Run cypress tests
-    - npx cypress run --reporter mochawesome  --reporter-options reportDir=reporter-config.json,overwrite=false,html=false,json=true
+    - npx cypress run --reporter mochawesome  --reporter-options reportDir=mochawesome-report,overwrite=false,html=false,json=true
     # Generate Mochawesome report
-    - npx mochawesome-merge "reporter-config.json/*.json" > mochawesome.json
+    - npx mochawesome-merge "mochawesome-report/*.json" > mochawesome.json
     - npx marge mochawesome.json
     # Rename mochawesome-report folder to public
     - mv mochawesome-report public

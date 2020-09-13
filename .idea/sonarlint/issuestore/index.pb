@@ -1,8 +1,4 @@
 
-d
-4cypress/integration/examples/getPokemonName2.spec.js,2\d\2d5084fe54e2d085bc5a5d3eebf77ba7c381df81
-c
-3cypress/integration/examples/getPokemonName.spec.js,a\3\a38d34cefbe07e42d0e086d9650dd178aae2c0db
 <
 cypress.json,1\c\1cd7786282577f82e5e5d7703505815e6e9e412e
 <
@@ -16,3 +12,5 @@ c
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
+S
+#mochawesome-report/mochawesome.html,1\2\125cb1612562552bab6100ac01063e0be4193afb
