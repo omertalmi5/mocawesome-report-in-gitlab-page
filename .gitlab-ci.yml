@@ -2,6 +2,7 @@
 stages:
   - build
   - test
+  - pages
 
 # to cache both npm modules and Cypress binary we use environment variables
 # to point at the folders we can list as paths in "cache" job settings
@@ -20,7 +21,6 @@ cache:
 install:
   image: cypress/base:10
   stage: build
-
   script:
     - npm ci
     # check Cypress binary path and cached versions
@@ -30,17 +30,35 @@ install:
     - npm run cy:verify
     - npm run cy:info
 
-pages:
+test:
   image: cypress/base:10
   stage: test
   script:
     # Run cypress tests
     - npx cypress run --reporter mochawesome  --reporter-options reportDir=mochawesome-report,overwrite=false,html=false,json=true
+  artifacts:
+    expire_in: 30 days
+    when: always
+    paths:
+      - mochawesome-report
+      - cypress/screenshots
+
+pages:
+  image: cypress/base:10
+  stage: pages
+  script:
     # Generate Mochawesome report
     - npx mochawesome-merge "mochawesome-report/*.json" > mochawesome.json
     - npx marge mochawesome.json
     # Rename mochawesome-report folder to public
     - mv mochawesome-report public
+  when: always
+  only:
+    - master
   artifacts:
+    expire_in: 30 days
+    when: always
     paths:
       - public
+      - mochawesome-report
+      - cypress/screenshots
